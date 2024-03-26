@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>নির্দেশিকা</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e1099706-b4d9-4417-985b-5d274db0c852" class="page sans"><header><h1 class="page-title">নির্দেশিকা</h1><p class="page-description"></p></header><div class="page-body"><p id="7c44f3af-d0e8-47ee-9956-ffdcb43ef816" class="">এই ডকুমেন্টে স্মার্ট স্কুল বাস এর ওয়েব এপ্লিকেশন <a href="http://smartschoolbus.gov.bd">smartschoolbus.gov.bd</a> ব্যবহারের নিয়মাবলী বর্ণনা করা হয়েছে। </p><div id="73c83719-6d69-4a4c-83e2-08f87bd1e28e" class="column-list"><div id="3d578696-9162-411d-86d7-6e4c2bd39e9b" style="width:37.5%" class="column"><ul id="ea5d59f5-aed5-47ea-8cce-2f913c9d2a09" class="bulleted-list"><li style="list-style-type:disc">প্রথমত, গুগল এ গিয়ে সার্চ করতে হবে “smart school bus” নামে। সার্চ রেজাল্টের শুরুর সাইট টি সিলেক্ট করতে হবে।</li></ul><p id="336945e0-4858-4cd1-9543-b6c1e1f342de" class="">
+</p></div><div id="63c4ca0e-c966-4cbe-83c9-e6f846e5e0a3" style="width:62.5%" class="column"><figure id="484f09fb-1139-48ce-a0a5-4ffa773dfa18" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled.png"><img style="width:1107px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled.png"/></a></figure></div></div><div id="d757b528-9e54-46de-a587-703a789dccbd" class="column-list"><div id="dfafaa42-d050-4272-90e6-882ad0dd6113" style="width:31.25%" class="column"><ul id="33e859a0-ea1f-47f2-b487-7f330acb9348" class="bulleted-list"><li style="list-style-type:disc">সিলেক্ট করলে এই ল্যান্ডিং পেজ টি ওপেন হবে।</li></ul></div><div id="b0f998b8-d476-442c-8b3e-8fa160dc9e42" style="width:68.75%" class="column"><figure id="76b350c7-a8fa-4749-b830-062c4f9cf0ea" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%201.png"><img style="width:1920px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%201.png"/></a></figure></div></div><ul id="3ba50caa-f59f-42f6-ba53-28283fba97c7" class="bulleted-list"><li style="list-style-type:disc">যারা ইতোমধ্যে স্মার্ট স্কুল বাস সার্ভিসে রেজিস্টার করেছেন, তারা ল্যান্ডিং পেজ টি স্ক্রল করে নিচের দিকে উল্লেখিত এই নাম্বারে কল করে, অথবা ডান পাশের চিহ্নিত লিঙ্কে ক্লিক করে ফেসবুক পেজে মেসেজ দিয়ে আপনাদের জন্য যে একাউন্ট তৈরি করা হয়েছে সেটার ক্রেডেনশিয়ালস, তথা email এবং password সংগ্রহ করে নেবেন। যারা রেজিস্টার করেন নি, তারা যোগাযোগ করে রেজিস্টার করে নেবেন।<figure id="c3af0ddf-3d14-4731-b38d-10da4aaec044" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%202.png"><img style="width:708px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%202.png"/></a></figure></li></ul><ul id="4623a966-32ca-457f-902f-e4212326ee0b" class="bulleted-list"><li style="list-style-type:disc">ওয়েব এপ্লিকেশনে লগ ইন করার জন্য টপ প্যানেল এর এই লগ ইন লিঙ্কে ক্লিক করতে হবে।<figure id="fa2d244f-9352-4b05-83cb-359047233ceb" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%203.png"><img style="width:708px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%203.png"/></a></figure></li></ul><div id="1f369925-854f-4b7b-a868-3828a5e2afa4" class="column-list"><div id="50c95bee-73d0-4058-b31a-18a29251bc33" style="width:50%" class="column"><ul id="171e76a9-6ae7-4067-963f-a459f957cdf1" class="bulleted-list"><li style="list-style-type:disc">এরপর প্রোভাইড করা ইমেইল, পাসওয়ার্ড সতর্কতার সাথে টাইপ করে লগ ইন বাটনে ক্লিক করতে হবে।</li></ul><p id="3cfec77e-403f-4c7b-832e-54d3c5390a88" class="">
+</p></div><div id="d1dde526-767f-4cb7-8752-f75cab7f6798" style="width:49.99999999999999%" class="column"><figure id="063efe42-7a3f-4683-a5d2-ccd0fa7d549f" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%204.png"><img style="width:336px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%204.png"/></a></figure></div></div><div id="524a9821-6554-42de-b1bf-87492aa869fc" class="column-list"><div id="99dd59f5-eb44-4a6b-8ada-26bbba9473f3" style="width:37.5%" class="column"><ul id="96ca3570-16fc-40c7-b353-67a61737369d" class="bulleted-list"><li style="list-style-type:disc">লগ ইন করলে এরকম একটি ড্যাশবোর্ড দেখা যাবে</li></ul></div><div id="fd4accdb-a967-47a0-a68e-efd3078e57f3" style="width:62.5%" class="column"><figure id="7196d263-34e0-4079-b680-7b2ef16ef0eb" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%205.png"><img style="width:708px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%205.png"/></a></figure></div></div><div id="2faff4f4-84af-43ac-805b-f90d7ed3a023" class="column-list"><div id="2896c1ef-4930-447e-b98f-905602e1ba9d" style="width:37.5%" class="column"><ul id="ed3379f3-c422-4566-9c23-b798dbf43575" class="bulleted-list"><li style="list-style-type:disc">বাম দিকের প্যানেলে “Manage Cards” সিলেক্ট করলে একাউন্টের আন্ডারে ইস্যু করা কার্ড গুলোর সিরিয়াল নম্বর দেখা যাবে। সিরিয়াল নম্বর টি আপনার কাছে থাকা কার্ড এর সাথে মিলিয়ে দেখুন। যদি মিল না থাকে তাহলে ল্যান্ডিং পেজে থাকা নম্বরে যোগাযোগ করুন।</li></ul></div><div id="c5aafd07-5ec2-4a23-be10-94e937ba591a" style="width:62.5%" class="column"><figure id="da8895c3-3d09-4ef8-8b5a-28c08d8c3df1" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%206.png"><img style="width:624px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%206.png"/></a></figure></div></div><div id="1f058a45-c9c2-447b-8f45-1460bd883110" class="column-list"><div id="bd561e41-5473-449e-81f5-05eb5f5cb23c" style="width:37.5%" class="column"><ul id="242987ff-84d3-494f-86a5-b2b90f0b71cd" class="bulleted-list"><li style="list-style-type:disc">“Manage Funds” সিলেক্ট করলে একাউন্ট ব্যালেন্স দেখা যাবে। এছাড়াও ব্যালেন্স রিচার্জের অপশন এবং পূর্ববর্তী রিচার্জের হিস্টরি গুলো দেখা যাবে। </li></ul></div><div id="4800d10c-474c-4c3d-a126-05a445be41b4" style="width:62.5%" class="column"><figure id="c5d73c20-9b9e-4b5b-9db0-69a3babe5dbc" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%207.png"><img style="width:1920px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%207.png"/></a></figure></div></div><div id="e4c9821d-f2a4-4355-91b0-961448a0fa86" class="column-list"><div id="58189a0c-23ae-42be-a55b-d266e0fa59c6" style="width:43.75%" class="column"><ul id="922f8ef5-de4d-4c9f-86f4-e18510a1d2f8" class="bulleted-list"><li style="list-style-type:disc">ফান্ড রিচার্জ করার জন্য <ol type="1" id="5176701c-dfa4-41e6-add9-cb399d97e401" class="numbered-list" start="1"><li>প্রথমে রিচার্জ এমাউন্ট লিখব</li></ol><ol type="1" id="5d1d9744-9a0b-45e6-8a12-76d6bb68b9fe" class="numbered-list" start="2"><li>এরপর নিচের চেক মার্ক টি ক্লিক করব</li></ol><ol type="1" id="f6382687-dc9c-452c-83da-4a9da0bd09a6" class="numbered-list" start="3"><li>এরপর রিচার্জ বাটনে প্রেস করব </li></ol></li></ul></div><div id="512ec641-d030-40e5-9567-bef3defc8a0e" style="width:56.25%" class="column"><figure id="102190bb-5ced-4a5f-a218-1a062a322094" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%208.png"><img style="width:331px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%208.png"/></a></figure></div></div><div id="fcfcdca0-4c55-4930-a1bb-dace914f76b0" class="column-list"><div id="26cbfa45-9f96-4166-a2fb-f90a18c0e33b" style="width:37.5%" class="column"><ul id="3aca2617-1917-4a3a-91c6-5a5caa3e25d9" class="bulleted-list"><li style="list-style-type:disc">এরপর “aamarpay” এর অনলাইন পেমেন্ট পোর্টাল ওপেন হবে। এখান থেকে কার্ড অথবা মোবাইল ব্যাঙ্কিং অপশন সিলেক্ট করে পেমেন্ট করা যাবে।(উল্লেখ্য, “aamarpay” ২ শতাংশ অনলাইন পেমেন্ট চার্জ এক্সট্রা নেবে)। এখান থেকে যেকোনো একটি মাধ্যমে টাকা পেমেন্ট করুন।</li></ul></div><div id="ff823857-5ffa-4219-844f-64a22363e954" style="width:62.5%" class="column"><figure id="d05bb985-727c-404e-ac2c-d0e558cdba3a" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%209.png"><img style="width:480px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%209.png"/></a></figure></div></div><div id="da028d20-c6f5-4376-872c-d38224af99bd" class="column-list"><div id="46406f78-cd6d-4ac3-baed-4ad7cc8ca054" style="width:50%" class="column"><ul id="8d29f261-682c-414a-a557-3ee0f01aa48c" class="bulleted-list"><li style="list-style-type:disc">পেমেন্ট সাকসেসফুল হলে এরকম একটি মেসেজ আসবে। এবং মূল একাউন্ট ব্যালেন্সে রিচার্জকৃত এমাউন্ট যুক্ত হবে।</li></ul></div><div id="973d9c15-48d0-4c95-bfc5-6fbc2cce1549" style="width:50%" class="column"><figure id="67c7b833-7527-4568-97d3-afc0d3eadbd9" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2010.png"><img style="width:331px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2010.png"/></a></figure></div></div><div id="428d23fd-7e8a-49e3-bf7c-05726ce199f6" class="column-list"><div id="e1eb7c0b-f006-4149-a9e8-5bb44020484d" style="width:50%" class="column"><ul id="1fa2bbcf-ba59-445b-856b-0f523a53b31d" class="bulleted-list"><li style="list-style-type:disc">শিক্ষার্থী বাসে ওঠার সময় বাসে লাগানো ডিভাইসে কার্ড পাঞ্চ করবে এবং বাস থেকে নামার সময় ডিভাইসে কার্ড পাঞ্চ করে নামবে। ডিভাইসে কার্ড পাঞ্চ করার কিছুক্ষনের মধ্যে অভিভাবকের মোবাইল ফোন নাম্বারে এস এম এস যাবে। এস এম এস এ বাসের নাম, নম্বর, গুগল ম্যাপ এর লোকেশন লিঙ্ক থাকবে যেখানে ক্লিক করে অভিভাবক দেখতে পারবেন কোন লোকেশন থেকে কার্ড পাঞ্চ করা হয়েছে। প্রতি ট্রিপে একাউন্ট হতে ৫ টাকা করে চার্জ করা হবে।</li></ul></div><div id="211cd09b-a168-4e05-be5b-61e2270f6f15" style="width:50%" class="column"><figure id="400bc875-8532-4479-8ec3-c1bf8ada0dd8" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2011.png"><img style="width:331px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2011.png"/></a></figure></div></div><ul id="baa3ee52-05cd-499e-b6c5-0ae266ae8bb3" class="bulleted-list"><li style="list-style-type:disc">ওয়েবসাইটের বাম পাশের প্যানেলের “Travel Log” সিলেক্ট করলে শিক্ষার্থীর সকল পাঞ্চ এর রেকর্ড পাওয়া যাবে। অভিভাবক এখান থেকে চাইলে ‘Download Logs’ বাটনে ক্লিক করে Excel ফরম্যাটে রেকর্ড ডাউনলোড করতে পারবে।<figure id="428e0005-7aa7-4d77-8f88-5ff15943632a" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2012.png"><img style="width:708px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2012.png"/></a></figure></li></ul><div id="d37e9c45-8662-40ae-abfe-0a3146a48905" class="column-list"><div id="7c304226-bec0-414a-bd1b-fc2bd247475d" style="width:43.75%" class="column"><ul id="3ff73030-28ea-4983-a629-b7a7bee0a4d1" class="bulleted-list"><li style="list-style-type:disc">প্রত্যেক রেকর্ডের ডান পাশে ‘View’ বাটনে ক্লিক করলে সেই পাঞ্চের ডিটেইলস দেখা যাবে যেখানে পাঞ্চ করার সময় ক্যামেরা দিয়ে তোলা ছবি, লোকেশন, বাস নম্বর, সময় সহ বিভিন্ন বিষয় উল্লেখিত থাকবে। </li></ul></div><div id="a4b54a0a-ba03-4742-8a7b-41fb7191166d" style="width:56.25%" class="column"><figure id="e78d56f5-f3fc-44dd-9d79-77f5a870cf1d" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2013.png"><img style="width:1536px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2013.png"/></a></figure><figure id="09546f06-e225-427b-ba7d-98274060bb3f" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2014.png"><img style="width:528px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2014.png"/></a></figure></div></div><div id="b1baa7c1-e590-4cb7-b59a-7e62d5b6f191" class="column-list"><div id="12738bc7-ca45-4a0d-b1fb-952834d6783d" style="width:43.75%" class="column"><ul id="43925ff8-72bb-49fe-b0c4-82e87e82591c" class="bulleted-list"><li style="list-style-type:disc">বাসে ওঠার পর হতে বাস থেকে নামার আগ পর্যন্ত অভিভাবক বাসের লাইভ লোকেশন এবং বাসের ক্যামেরা থেকে লাইভ ভিডিও ফিড দেখতে পারবেন। এজন্য বাম পাশের প্যানেলের “Live Location” অপশন টি সিলেক্ট করতে হবে। এতে ম্যাপে লাইভ লোকেশন দেখা যাবে এবং বাস এর নাম ও নম্বর দেখাবে। বাসের নম্বরের উপর ক্লিক করলে বাস থেকে লাইভ ভিডিও ফিড দেখা যাবে। </li></ul></div><div id="4d2b8e2a-fe69-429f-b1bb-8bec3c683151" style="width:56.25%" class="column"><figure id="d549f4e8-f562-4e3b-9a16-714a1c06c94d" class="image"><a href="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2015.png"><img style="width:576px" src="%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE%20e1099706b4d94417985b5d274db0c852/Untitled%2015.png"/></a></figure></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
